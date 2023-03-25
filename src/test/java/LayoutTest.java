@@ -29,4 +29,12 @@ class LayoutTest {
         assertTrue(layout.renderButtons() instanceof List<String>);
         assertEquals("Button of Dark theme was rendered", layout.renderButtons().get(0));
     }
+
+    @Test
+    void shouldRenderDarkTextBoxes() {
+        AbstractFactory factory = new DarkThemeFactory();
+        Layout layout = new Layout(factory);
+        assertTrue(layout.renderTextBoxes() instanceof List<String>);
+        assertEquals("Textbox of Dark theme was rendered", layout.renderTextBoxes().get(0));
+    }
 }
