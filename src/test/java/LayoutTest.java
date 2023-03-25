@@ -13,4 +13,12 @@ class LayoutTest {
         assertTrue(layout.renderButtons() instanceof List<String>);
         assertEquals("Button of Light theme was rendered", layout.renderButtons().get(0));
     }
+
+    @Test
+    void shouldRenderLightTextBoxes() {
+        AbstractFactory factory = new LightThemeFactory();
+        Layout layout = new Layout(factory);
+        assertTrue(layout.renderTextBoxes() instanceof List<String>);
+        assertEquals("Textbox of Light theme was rendered", layout.renderTextBoxes().get(0));
+    }
 }
